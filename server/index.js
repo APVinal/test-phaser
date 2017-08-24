@@ -1,13 +1,17 @@
 'use strict';
 
+require('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const {DATABASE_URL, PORT} = require('./config');
 const {Score} = require('./model');
+const path = require('path');
 
 const app = express();
 
+app.use(express.static(path.join(__dirname, '..', 'build')));
 app.use(bodyParser.json());
 mongoose.Promise = global.Promise;
 

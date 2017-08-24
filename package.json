@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server/index.js",
     "build": "rm -rf build && cp -r static/ build/ && cp -r src build/js/",
     "dev": "npm run build && npm run start",
     "heroku-postbuild": "npm run build"
@@ -13,9 +13,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "^4.15.4",
-    "http-proxy-middleware": "^0.17.4",
-    "mongoose": "^4.11.8"
+    "express": "^4.15.4"
   }
 }
