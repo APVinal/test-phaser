@@ -13,7 +13,7 @@ scoreSchema.methods.apiRepr = function() {
     id: this._id,
     initials: this.initials
   };
-};
+}; 
 
 const Score = mongoose.model('Score', scoreSchema);
 
